@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<meta name="description" content="在首页开头加上  &lt;?php ob_start(); ?&gt;  在首页最下面加上  &lt;?php
+$info = ob_get_contents();
+// 这个是这个页面的所有信息
+$filectime = filectime(" index.html"); // 这个index.html改成你需要的 if (!(time() - 3600 * 24 &gt; $filectime)) {…" />
+		<meta name="keywords" content="PHP,网站优化,技术," />
+		<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/malfunction7/CDN@main/img/sad.jpg" />
+		<meta name="theme-color" content="#31363b">
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+		<link media="all"
+			href="https://fairysen.com/wp-content/cache/autoptimize/css/autoptimize_f658b10f53a029cb60981bb709d1333f.css"
+			rel="stylesheet" />
+		<title>首页生成静态页面 - Ayamaru</title>
+		<link rel="canonical" href="view.html" />
+		<meta property="og:locale" content="zh_CN" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="首页生成静态页面 - Ayamaru" />
+		<meta property="og:description"
+			content="在首页开头加上 &lt;?php ob_start(); ?&gt; 在首页最下面加上 &lt;?php $info = ob_get_contents(); // 这个是这个页面的所有信息 $filectime = filectime(&quot;index.html&quot;); // 这个index.html改成你需要的 if (! ..." />
+		<meta property="og:url" content="view.html" />
+		<meta property="og:site_name" content="Ayamaru" />
+		<meta property="article:published_time" content="2021-11-22T01:47:43+00:00" />
+		<meta property="article:modified_time" content="2021-11-22T21:23:44+00:00" />
+		
+		
+		
+		<script type="application/ld+json" class="yoast-schema-graph">
+			{
+				"@context": "https://schema.org",
+				"@graph": [{
+					"@type": "WebSite",
+					"@id": "https://fairysen.com/#website",
+					"url": "https://fairysen.com/",
+					"name": "\u96fe\u65f6\u4e4b\u68ee",
+					"description": "_(:\u0437\u300d\u2220)_ Kinoko&#039;s Blog",
+					"publisher": {
+						"@id": "https://fairysen.com/#/schema/person/66c919c7fa0ab6207f295b904e3b4f81"
+					},
+					"potentialAction": [{
+						"@type": "SearchAction",
+						"target": {
+							"@type": "EntryPoint",
+							"urlTemplate": "https://fairysen.com/?s={search_term_string}"
+						},
+						"query-input": "required name=search_term_string"
+					}],
+					"inLanguage": "zh-CN"
+				}, {
+					"@type": "WebPage",
+					"@id": "https://fairysen.com/105.html#webpage",
+					"url": "https://fairysen.com/105.html",
+					"name": "\u9996\u9875\u751f\u6210\u9759\u6001\u9875\u9762 - \u96fe\u65f6\u4e4b\u68ee",
+					"isPartOf": {
+						"@id": "https://fairysen.com/#website"
+					},
+					"datePublished": "2021-11-22T01:47:43+00:00",
+					"dateModified": "2021-11-22T21:23:44+00:00",
+					"breadcrumb": {
+						"@id": "view.html"
+					},
+					"inLanguage": "zh-CN",
+					"potentialAction": [{
+						"@type": "ReadAction",
+						"target": ["view.html"]
+					}]
+				}, {
+					"@type": "BreadcrumbList",
+					"@id": "view.html",
+					"itemListElement": [{
+						"@type": "ListItem",
+						"position": 1,
+						"name": "\u9996\u9875",
+						"item": "https://fairysen.com/"
+					}, {
+						"@type": "ListItem",
+						"position": 2,
+						"name": "\u9996\u9875\u751f\u6210\u9759\u6001\u9875\u9762"
+					}]
+				}, {
+					"@type": "Article",
+					"@id": "https://fairysen.com/105.html#article",
+					"isPartOf": {
+						"@id": "https://fairysen.com/105.html#webpage"
+					},
+					"author": {
+						"@id": "https://fairysen.com/#/schema/person/66c919c7fa0ab6207f295b904e3b4f81"
+					},
+					"headline": "\u9996\u9875\u751f\u6210\u9759\u6001\u9875\u9762",
+					"datePublished": "2017-12-10T01:47:43+00:00",
+					"dateModified": "2021-10-06T21:23:44+00:00",
+					"mainEntityOfPage": {
+						"@id": "https://fairysen.com/105.html#webpage"
+					},
+					"wordCount": 0,
+					"commentCount": 0,
+					"publisher": {
+						"@id": "https://fairysen.com/#/schema/person/66c919c7fa0ab6207f295b904e3b4f81"
+					},
+					"keywords": ["PHP", "\u7f51\u7ad9\u4f18\u5316"],
+					"articleSection": ["\u6280\u672f"],
+					"inLanguage": "zh-CN",
+					"potentialAction": [{
+						"@type": "CommentAction",
+						"name": "Comment",
+						"target": ["https://fairysen.com/105.html#respond"]
+					}]
+				}, {
+					"@type": ["Person", "Organization"],
+					"@id": "https://fairysen.com/#/schema/person/66c919c7fa0ab6207f295b904e3b4f81",
+					"name": "Kinoko",
+					"image": {
+						"@type": "ImageObject",
+						"@id": "https://fairysen.com/#personlogo",
+						"inLanguage": "zh-CN",
+						"url": "https://sdn.geekzu.org/avatar/aae47762ad891caa1fe17c3d8efdf15d?s=96&r=g",
+						"contentUrl": "https://sdn.geekzu.org/avatar/aae47762ad891caa1fe17c3d8efdf15d?s=96&r=g",
+						"caption": "Kinoko"
+					},
+					"logo": {
+						"@id": "https://fairysen.com/#personlogo"
+					},
+					"sameAs": ["https://fairysen.com/"]
+				}]
+			}
+		</script>
+		
+		
+		<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+		
+		
+		<link rel='stylesheet' id='APlayer.min-css'
+			href='https://cdn.jsdelivr.net/gh/moeplayer/hermit-x@2.9.9/assets/css/APlayer.min.css' type='text/css'
+			media='all' />
+		<style type="text/css">
+			.site-top .lower nav {
+				display: block !important;
+			}
+
+			.author-profile i,
+			.post-like a,
+			.post-share .show-share,
+			.sub-text,
+			.we-info a,
+			span.sitename,
+			.post-more i:hover,
+			#pagination a:hover,
+			.post-content a:hover,
+			.float-content i:hover {
+				color: #fe9600
+			}
+
+			.feature i,
+			/*.feature-title span ,*/
+			.download,
+			.navigator i:hover,
+			.links ul li:before,
+			.ar-time i,
+			span.ar-circle,
+			.object,
+			.comment .comment-reply-link,
+			.siren-checkbox-radio:checked+.siren-checkbox-radioInput:after {
+				background: #fe9600
+			}
+
+			::-webkit-scrollbar-thumb {
+				background: #fe9600
+			}
+
+			.download,
+			.navigator i:hover,
+			.link-title,
+			.links ul li:hover,
+			#pagination a:hover,
+			.comment-respond input[type='submit']:hover {
+				border-color: #fe9600
+			}
+
+			.entry-content a:hover,
+			.site-info a:hover,
+			.comment h4 a,
+			#comments-navi a.prev,
+			#comments-navi a.next,
+			.comment h4 a:hover,
+			.site-top ul li a:hover,
+			.entry-title a:hover,
+			#archives-temp h3,
+			span.page-numbers.current,
+			.sorry li a:hover,
+			.site-title a:hover,
+			i.iconfont.js-toggle-search.iconsearch:hover,
+			.comment-respond input[type='submit']:hover,
+			blockquote:before,
+			blockquote:after {
+				color: #fe9600
+			}
+
+			#aplayer-float .aplayer-lrc-current {
+				color: #fe9600 !important
+			}
+
+			.is-active-link::before,
+			.commentbody:not(:placeholder-shown)~.input-label,
+			.commentbody:focus~.input-label {
+				background-color: #fe9600 !important
+			}
+
+			.commentbody:focus {
+				border-color: #fe9600 !important
+			}
+
+			.insert-image-tips:hover,
+			.insert-image-tips-hover {
+				color: #fe9600;
+				border: 1px solid #fe9600
+			}
+
+			.site-top ul li a:after {
+				background-color: #fe9600
+			}
+
+			.scrollbar,
+			.butterBar-message {
+				background: #fe9600 !important
+			}
+
+			#nprogress .spinner-icon {
+				border-top-color: #fe9600;
+				border-left-color: #fe9600
+			}
+
+			#nprogress .bar {
+				background: #fe9600
+			}
+
+			.changeSkin-gear,
+			.toc {
+				background: rgba(255, 255, 255, 0.8);
+			}
+
+			.entry-content th {
+				background-color: #fe9600
+			}
+
+			.post-list-thumb:nth-child(2n) .post-content-wrap {
+				float: left;
+				padding-left: 30px;
+				padding-right: 0;
+				text-align: right;
+				margin: 20px 10px 10px 0
+			}
+
+			.post-list-thumb:nth-child(2n) .post-thumb {
+				float: left
+			}
+
+			.post-list-thumb:nth-child(2n) .post-thumb a {
+				border-radius: 10px 0 0 10px
+			}
+
+
+			.post-list-thumb {
+				opacity: 0
+			}
+
+			.post-list-show {
+				opacity: 1
+			}
+
+			.comments .comments-main {
+				display: block !important;
+			}
+
+			.comments .comments-hidden {
+				display: none !important;
+			}
+
+			.centerbg {
+				background-image: url("https://cdn.jsdelivr.net/gh/malfunction7/CDN@main/img/homeblog.jpg");
+				background-position: center center;
+				background-attachment: inherit;
+			}
+
+			.rotating {
+				-webkit-animation: rotating 6s linear infinite;
+				-moz-animation: rotating 6s linear infinite;
+				-ms-animation: rotating 6s linear infinite;
+				-o-animation: rotating 6s linear infinite;
+				animation: rotating 6s linear infinite;
+			}
+
+			body.dark #main-container,
+			body.dark .pattern-center:after,
+			body.dark #mo-nav,
+			body.dark .headertop-bar::after,
+			body.dark .site-content,
+			body.dark .comments,
+			body.dark .site-footer {
+				background: #31363b !important;
+			}
+
+			body.dark .pattern-center-blank,
+			body.dark .yya,
+			body.dark .blank,
+			body.dark .changeSkin-gear,
+			body.dark .toc,
+			body.dark .search-form input {
+				background: rgba(49, 54, 59, 0.85);
+			}
+
+			body.dark .single-reward .reward-row {
+				background: #bebebe;
+			}
+
+			body.dark .font-family-controls button {
+				background-color: #828080;
+			}
+
+			body.dark .single-reward .reward-row:before {
+				border-bottom: 13px solid #bebebe;
+			}
+
+			body.dark .search-form--modal,
+			body.dark .ins-section .ins-section-header {
+				border-bottom: none;
+				background: rgba(49, 54, 59, 0.95);
+			}
+
+			body.dark .ins-section .ins-search-item:hover,
+			body.dark .ins-section .ins-search-item.active,
+			body.dark .ins-section .ins-search-item:hover .ins-slug,
+			body.dark .ins-section .ins-search-item.active .ins-slug,
+			body.dark .ins-section .ins-search-item:hover .ins-search-preview,
+			body.dark .ins-section .ins-search-item.active .ins-search-preview,
+			body.dark .ins-section .ins-search-item:hover header,
+			body.dark .ins-section .ins-search-item:hover .iconfont {
+				color: #fff;
+				background: #31363b;
+			}
+
+			body.dark .search_close:after,
+			body.dark .search_close:before {
+				background-color: #eee;
+			}
+
+			body.dark .search_close:hover:after,
+			body.dark .search_close:hover:before {
+				background-color: #3daee9;
+			}
+
+			body.dark input.m-search-input {
+				background: #bebebe;
+			}
+
+			body.dark .openNav .icon,
+			body.dark .openNav .icon:after,
+			body.dark .openNav .icon:before {
+				background-color: #eee;
+			}
+
+			body.dark .site-header:hover {
+				background: #31363b;
+			}
+
+			body.dark .post-date,
+			body.dark .post-list-thumb a,
+			body.dark .menhera-container .emoji-item:hover {
+				color: #424952;
+			}
+
+			body.dark .entry-content p,
+			body.dark .entry-content ul,
+			body.dark .entry-content ol,
+			body.dark .comments .body p,
+			body.dark .float-content,
+			body.dark .post-list p,
+			body.dark .link-title {
+				color: #bebebe !important;
+			}
+
+			body.dark .entry-title a,
+			body.dark .post-list-thumb .post-title,
+			body.dark .post-list-thumb,
+			body.dark .art-content #archives .al_mon_list .al_mon,
+			body.dark .art-content #archives .al_mon_list span,
+			body.dark .art .art-content #archives a,
+			body.dark .menhera-container .emoji-item {
+				color: #bebebe;
+			}
+
+			body.dark .logolink a,
+			body.dark .post-content a:hover,
+			body.dark .comment .body p a {
+				color: rgba(61, 174, 233, 0.8) !important;
+			}
+
+			body.dark .lower li ul,
+			body.dark .header-user-avatar:hover .header-user-menu {
+				background: #31363b;
+			}
+
+			body.dark .header-user-menu::before,
+			body.dark .lower li ul::before {
+				border-color: transparent transparent #31363b transparent;
+			}
+
+			body.dark .site-top ul li a,
+			body.dark .header-user-menu a,
+			body.dark #mo-nav ul li a,
+			body.dark .site-title a,
+			body.dark header.page-header,
+			body.dark h1.cat-title {
+				color: #eee;
+			}
+
+			body.dark .art .art-content #archives .al_year,
+			body.dark .comment-respond input,
+			body.dark .comment-respond textarea,
+			body.dark .siren-checkbox-label {
+				color: #eee;
+			}
+
+			body.dark input[type=color]:focus,
+			body.dark input[type=date]:focus,
+			body.dark input[type=datetime-local]:focus,
+			body.dark input[type=datetime]:focus,
+			body.dark input[type=email]:focus,
+			body.dark input[type=month]:focus,
+			body.dark input[type=number]:focus,
+			body.dark input[type=password]:focus,
+			body.dark input[type=range]:focus,
+			body.dark input[type=search]:focus,
+			body.dark input[type=tel]:focus,
+			body.dark input[type=text]:focus,
+			body.dark input[type=time]:focus,
+			body.dark input[type=url]:focus,
+			body.dark input[type=week]:focus,
+			body.dark textarea:focus,
+			body.dark #mo-nav .m-search form {
+				color: #eee;
+				background-color: #31363b;
+			}
+
+			body.dark .post-date,
+			body.dark .post-list-thumb a,
+			body.dark .post-meta {
+				color: #888;
+			}
+
+			body.dark img,
+			body.dark .cd-top,
+			body.dark .highlight-wrap,
+			body.dark iframe,
+			body.dark .entry-content .aplayer {
+				filter: brightness(0.8);
+			}
+
+			body.dark .post-list-thumb {
+				box-shadow: 0 1px 35px -8px rgba(0, 0, 0, 0.8);
+			}
+
+			body.dark .centerbg {
+				background-blend-mode: hard-light;
+				background-color: #31363b;
+			}
+
+			body.dark .notice {
+				color: #EFF0F1;
+				background: #232629;
+				border: none;
+			}
+
+			body.dark h1.fes-title,
+			body.dark h1.main-title {
+				border-bottom: 1px dashed #ababab;
+			}
+
+			body.dark .scrollbar,
+			body.dark .butterBar p.butterBar-message {
+				background: #3daee9 !important;
+			}
+
+			body.dark .entry-content p code {
+				color: #eee !important;
+				background: rgba(61, 174, 233, 0.5) !important;
+			}
+
+			body.dark .notification,
+			body.dark #moblieGoTop,
+			body.dark #moblieDarkLight {
+				color: #eee;
+				background-color: #232629;
+			}
+
+			body.dark #moblieGoTop:hover,
+			body.dark #moblieDarkLight:hover {
+				background-color: #232629;
+				opacity: .8;
+			}
+
+			body.dark .widget-area {
+				background-color: rgba(35, 38, 41, 0.8);
+			}
+
+			body.dark .skin-menu,
+			body.dark .menu-list li,
+			body.dark .widget-area .heading,
+			body.dark .widget-area .show-hide svg,
+			body.dark #aplayer-float,
+			body.dark .aplayer.aplayer-fixed .aplayer-body,
+			body.dark .aplayer .aplayer-miniswitcher,
+			body.dark .aplayer .aplayer-pic {
+				color: #eee;
+				background-color: #232629 !important;
+			}
+
+			body.dark .skin-menu::after {
+				border-color: #232629 transparent transparent transparent;
+			}
+
+			body.dark .aplayer .aplayer-list ol li .aplayer-list-author {
+				color: #eee;
+			}
+
+			body.dark #aplayer-float .aplayer-lrc-current {
+				color: transparent !important;
+			}
+
+			body.dark .aplayer.aplayer-fixed .aplayer-lrc {
+				text-shadow: -1px -1px 0 #989898;
+			}
+
+			body.dark .aplayer .aplayer-list ol li.aplayer-list-light {
+				background: rgba(61, 174, 233, 0.5) !important;
+			}
+
+			body.dark .aplayer .aplayer-list ol li:hover {
+				background: rgba(61, 174, 233, 0.8) !important;
+			}
+
+			body.dark .aplayer.aplayer-fixed .aplayer-list {
+				border: none !important;
+			}
+
+			body.dark .aplayer.aplayer-fixed .aplayer-info,
+			body.dark .aplayer .aplayer-list ol li {
+				border-top: none !important;
+			}
+
+			body.dark .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon:hover path,
+			body.dark .widget-area .show-hide svg path {
+				fill: #fafafa;
+			}
+
+			body.dark,
+			body.dark button,
+			body.dark input,
+			body.dark select,
+			body.dark textarea {
+				color: #eee;
+			}
+
+			body.dark button,
+			body.dark input[type=button],
+			body.dark input[type=reset],
+			body.dark input[type=submit] {
+				box-shadow: none;
+			}
+
+			body.dark .entry-content th {
+				background-color: #3daee9;
+			}
+
+			body.dark .author-profile i,
+			body.dark .post-like a,
+			body.dark .post-share .show-share,
+			body.dark .sub-text,
+			body.dark .we-info a,
+			body.dark span.sitename,
+			body.dark .post-more i:hover,
+			body.dark #pagination a:hover,
+			body.dark .post-content a:hover,
+			body.dark .float-content i:hover {
+				color: #3daee9;
+			}
+
+			body.dark .feature i,
+			body.dark .feature-title span,
+			body.dark .download,
+			body.dark .navigator i:hover,
+			body.dark .links ul li:before,
+			body.dark .ar-time i,
+			body.dark span.ar-circle,
+			body.dark .object,
+			body.dark .comment .comment-reply-link,
+			body.dark .siren-checkbox-radio:checked+.siren-checkbox-radioInput:after {
+				background: #3daee9;
+			}
+
+			body.dark .download,
+			body.dark .navigator i:hover,
+			body.dark .link-title,
+			body.dark .links ul li:hover,
+			body.dark #pagination a:hover,
+			body.dark .comment-respond input[type='submit']:hover {
+				border-color: #3daee9;
+			}
+
+			body.dark .site-info a:hover,
+			body.dark .comment h4 a,
+			body.dark #comments-navi a.prev,
+			body.dark #comments-navi a.next,
+			body.dark .comment h4 a:hover,
+			body.dark .site-top ul li a:hover,
+			body.dark .entry-title a:hover,
+			body.dark #archives-temp h3,
+			body.dark span.page-numbers.current,
+			body.dark .sorry li a:hover,
+			body.dark .site-title a:hover,
+			body.dark .js-toggle-search.iconsearch:hover,
+			body.dark .comment-respond input[type='submit']:hover,
+			body.dark blockquote:before,
+			body.dark blockquote:after,
+			body.dark .entry-content a {
+				color: #3daee9 !important;
+			}
+
+			body.dark .entry-content a:hover {
+				color: #3daee9;
+				text-decoration: underline !important;
+			}
+
+			body.dark .is-active-link::before,
+			body.dark .commentbody:not(:placeholder-shown)~.input-label,
+			body.dark .commentbody:focus~.input-label {
+				background-color: #3daee9 !important;
+			}
+
+			body.dark .commentbody:focus {
+				border-color: #3daee9 !important;
+			}
+
+			body.dark .insert-image-tips:hover,
+			body.dark .insert-image-tips-hover {
+				color: #3daee9;
+				border: 1px solid #3daee9;
+			}
+
+			body.dark .site-top ul li a:after,
+			body.dark .menu-list li:hover,
+			body.dark .font-family-controls button.selected {
+				background-color: #3daee9 !important;
+			}
+
+			body.dark #nprogress .spinner-icon {
+				border-top-color: #3daee9;
+				border-left-color: #3daee9;
+			}
+
+			body.dark #nprogress .bar {
+				background: #3daee9;
+			}
+
+			body.dark .comment .info,
+			body.dark .comment-respond .logged-in-as,
+			body.dark .notification,
+			body.dark .comment-respond .logged-in-as a,
+			body.dark .comment-respond .logged-in-as a:hover {
+				color: #9499a8;
+			}
+
+			body.dark .sm {
+				color: #377292 !important;
+			}
+
+			html,
+			#main-container,
+			.pattern-center:after,
+			#mo-nav,
+			.headertop-bar::after,
+			.site-content,
+			.comments,
+			.site-footer,
+			.pattern-center-blank,
+			.yya,
+			.blank,
+			.changeSkin-gear,
+			.toc,
+			.search-form input {
+				transition: background 1s;
+			}
+
+			.entry-content p,
+			.entry-content ul,
+			.entry-content ol,
+			.comments .body p,
+			.float-content,
+			.post-list p,
+			.link-title {
+				transition: color 1s;
+			}
+
+			body.dark::-webkit-scrollbar-thumb,
+			body.dark::selection {
+				background: #377292;
+				color: #ccc;
+			}
+		</style>
+		<script>
+			/*Initial Variables*/
+			var mashiro_option = new Object();
+			var mashiro_global = new Object();
+			mashiro_option.NProgressON = true;
+			/* 
+			 * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+			 * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+			 */
+			mashiro_option.email_domain = "";
+			mashiro_option.email_name = "";
+			mashiro_option.cookie_version_control = "";
+			mashiro_option.qzone_autocomplete = false;
+			mashiro_option.site_name = "晨曦の初";
+			mashiro_option.author_name = "晨曦の初";
+			mashiro_option.template_url = "";
+			mashiro_option.site_url = "index.html";
+			mashiro_option.qq_api_url = "";
+			// mashiro_option.qq_avatar_api_url = "https://api.2heng.xin/qqinfo/";
+			mashiro_option.live_search = false;
+			
+			mashiro_option.skin_bg0 = "none";
+			mashiro_option.skin_bg1 = "https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/sakura.png";
+			mashiro_option.skin_bg2 = "https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/plaid2dbf8.jpg";
+			mashiro_option.skin_bg3 = "https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/star02.png";
+			mashiro_option.skin_bg4 = "https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/kyotoanimation.png";
+			mashiro_option.skin_bg5 = "https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/dot_orange.gif";
+			mashiro_option.skin_bg6 = "https://api.mashiro.top/bing/";
+			mashiro_option.skin_bg7 = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.2/other-sites/api-index/images/me.png";
+
+			mashiro_option.darkmode = false;
+
+			mashiro_option.land_at_home = false;
+
+			mashiro_option.baguetteBoxON = true;
+
+			mashiro_option.clipboardCopyright = false;
+
+			mashiro_option.entry_content_theme_src = "https://fairysen.com/wp-content/themes/Sakura/cdn/theme/sakura.css?3.4.0";
+			mashiro_option.entry_content_theme = "sakura";
+
+			mashiro_option.jsdelivr_css_src = "https://fairysen.com/wp-content/themes/Sakura/cdn/css/lib.css?3.4.0";
+			mashiro_option.float_player_on = true;
+			mashiro_option.meting_api_url = "https://fairysen.com/wp-json/sakura/v1/meting/aplayer";
+
+			mashiro_option.cover_api = "https://fairysen.com/wp-json/sakura/v1/image/cover";
+
+			mashiro_option.windowheight = /Mobile|Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? 'fixed' :
+				'auto';
+			/*End of Initial Variables*/
+		</script>
+		<script type="text/javascript">
+			if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+				alert('朋友，IE浏览器未适配哦~\n如果是 360、QQ 等双核浏览器，请关闭 IE 模式！');
+			}
+		</script>
+	</head>
+	<body class="post-template-default single single-post postid-105 single-format-standard chinese-font  ">
+		<div class="scrollbar" id="bar"></div>
+		
+		
+		
+		<!-- 樱花瓣飘落 -->
+		<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/sakura.js"></script>
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+		<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
+		<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/js/fireworks.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/mouse_snow.min.js"></script>
+		<a href="#" class="cd-top faa-float animated"></a>
+		
+		
+		<section id="main-container">
+			<div class="headertop filter-grid" style="height: auto;">
+				<style>
+					.header-info::before {
+						display: none !important;
+						opacity: 0 !important;
+					}
+				</style>
+				<div id="banner_wave_1"></div>
+				<div id="banner_wave_2"></div>
+		
+		
+				<figure id="centerbg" class="centerbg" style="height: 100vh; background-image: url(https://cdn.jsdelivr.net/gh/malfunction7/CDN@main/img/homeblog.jpg);">
+		
+					<div class="focusinfo">
+		
+						<!-- 个人头像 -->
+						<div class="header-tou" title="用户头像">
+							<a href="index.html">
+								<img src="https://cdn.jsdelivr.net/gh/malfunction7/CDN@main/img/dogge.gif">
+							</a>
+						</div>
+		
+						<h1 class="center-text glitch is-glitching Ubuntu-font" data-text="HEY,MASTER!"
+							title="こんにちは,マスター!">HEY,MASTER!</h1>
+						<div class="header-info" title="情不知所起，一往而深">
+							
+							<p><span class="faa-flash animated">
+									<i class="fa fa-quote-left"></i></span>
+								love once begun,will never end!
+								<span class="faa-flash animated">
+									<i class="fa fa-quote-right"></i></span>
+							</p>
+		
+		
+		
+							<div class="top-social_v2">
+								<li id="bg-pre"><img class="flipx"
+										src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/next-b.svg">
+								</li>
+		
+								<li class="github"><a href="https://github.com/malfunction7" target="_blank"
+										title="github"><img src="https://cdn.jsdelivr.net/gh/malfunction7/CDN@main/img/GitHub.png"></a>
+								</li>
+		
+								<li class="csdn"><a href="https://blog.csdn.net/qq_57054018" target="_blank"
+										title="csdn"><img src="https://cdn.jsdelivr.net/gh/malfunction7/CDN@main/img/blog.csdn.jpg"></a>
+								</li>
+		
+								<li class="qq"><a href="tencent://message/?uin=396328923" title="Tencent QQ"><img
+											src="https://cdn.jsdelivr.net/gh/malfunction7/CDN@main/img/qq.png"></a>
+								</li>
+		
+								<li class="bilibili"><a href="https://space.bilibili.com/23264903" target="_blank"
+										title="bilibili"><img src="https://cdn.jsdelivr.net/gh/malfunction7/CDN@main/img/bilibili.jpg"></a>
+								</li>
+		
+								<li class="NetEase"><a href="https://music.163.com/#/user/home?id=83998807"
+										target="_blank" title="CloudMusic"><img
+											src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wangyiyun.png"></a>
+								</li>
+		
+								<li class="steam"><a href="https://steamcommunity.com/id/396328923/" target="_blank" title="steam"><img src="https://cdn.jsdelivr.net/gh/malfunction7/CDN@main/img/steam.jpg"
+										></a>
+								</li>
+		
+								<li><a onclick="mail_me()" class="NetEase" title="E-mail"><img
+											src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/email.svg"></a>
+								</li>
+		
+								<li id="bg-next"><img
+										src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/next-b.svg">
+								</li>
+		
+							</div>
+						</div>
+					</div>
+				</figure>
+		
+				<div class="headertop-down faa-float animated" title="标题自上而下" onclick="headertop_down()"><span><i
+							class="fa fa-chevron-down" aria-hidden="true"></i></span></div>
+		
+			</div>
+		
+			<div id="page" class="site wrapper">
+				<header class="site-header no-select is-homepage yya" role="banner">
+		
+					<div class="site-top">
+						<div class="site-branding">
+							<span class="site-title">
+								<span class="logolink rabbit">
+									<a href="index.html">
+										<ruby>
+											<span class="sakuraso">晨曦</span>
+											<span class="no">の</span>
+											<span class="shironeko">初</span>
+											<rp></rp>
+											<rt class="chinese-font">小虎兽</rt>
+											<rp></rp>
+										</ruby>
+									</a>
+								</span>
+							</span>
+						</div>
+		
+		
+		
+		
+		
+		
+		
+		
+						<div class="lower-cantiner">
+							<div class="lower">
+								<nav class="mobile-fit-control hide">
+									<ul id="menu-menu" class="menu">
+										<li class="current-menu-item"><a href="" aria-current="page">🌈 首页</a></li>
+										<li><a href="">📂 归档</a>
+										
+											<ul class="sub-menu">
+												<li><a href="">笔记 📔</a></li>
+											</ul>
+										</li>
+		
+										<li><a href="">🎯 清单</a>
+											<ul class="sub-menu">
+												<li><a href="">电影 🎞️</a></li>
+												<li><a href="">番剧 🍨</a></li>
+												<li><a href="">游戏 🎮</a></li>
+												<li><a href="">歌单 🎵</a></li>
+											</ul>
+										</li>
+		
+										<li><a href="">📝 留言板</a></li>
+		
+										<li><a href="">📌 关于</a>
+											<ul class="sub-menu">
+												<li><a href="">我? 👑</a></li>
+											</ul>
+										</li>
+		
+										<li><a href="">👀 看看</a>
+											<ul class="sub-menu">
+												<li><a href="">API ⚙️</a></li>
+												<li><a href="">画廊 🖼️</a></li>
+												<li><a href="">导航 🌞</a></li>
+											</ul>
+										</li>
+		
+										<li><a href="https://travellings.link">🚇 开往</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+		
+						<div class="header-user-avatar">
+							<a href="login.html">
+								<img class="faa-shake animated-hover" src="https://cdn.jsdelivr.net/gh/malfunction7/CDN@main/img/login.png" width="30" height="30"> </a>
+		
+							<div class="header-user-menu">
+								<div class="herder-user-name no-logged">Whether to <a href="login.html" target="_blank"
+										style="color:#333;font-weight:bold;text-decoration:none">log in</a> now?</div>
+							</div>
+						</div>
+						
+						
+						
+						<div class="searchbox"><i class="iconfont js-toggle-search iconsearch icon-search"></i></div>
+					</div>
+				</header>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<div class="pattern-center-blank"></div>
+				<div class="pattern-center single-center">
+					<div class="pattern-attachment-img lazyload"
+						style="background-image: url(https://cdn.jsdelivr.net/gh/malfunction7/CDN@main/img/homeblog.jpg)"
+						data-src="https://cdn.jsdelivr.net/gh/malfunction7/CDN@main/img/homeblog.jpg"></div>
+					<header class="pattern-header single-header">
+						<h1 class="entry-title">首页生成静态页面</h1>
+						<p class="entry-census"><span><a href="https://fairysen.com/author/Kinoko/"><img
+										src="https://sdn.geekzu.org/avatar/aae47762ad891caa1fe17c3d8efdf15d?s=96&r=g"></a></span><span><a
+									href="https://fairysen.com/author/Kinoko/">Ayamru</a></span><span
+								class="bull">·</span>2021-11-22<span class="bull">·</span>0 次阅读</p>
+					</header>
+				</div>
+				<div id="content" class="site-content">
+					<div id="primary" class="content-area">
+						<main id="main" class="site-main" role="main">
+							<article id="post-105"
+								class="post-105 post type-post status-publish format-standard hentry category-code tag-php tag-138">
+								
+								<footer class="post-footer">
+									<div class="post-lincenses"><a
+											href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+											target="_blank" rel="nofollow"><i class="fa fa-creative-commons"
+												aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+									<div class="post-tags"> <i class="iconfont icon-tags"></i> <a
+											href="https://fairysen.com/tag/php/" rel="tag">PHP</a> <a
+											href="https://fairysen.com/tag/%e7%bd%91%e7%ab%99%e4%bc%98%e5%8c%96/"
+											rel="tag">网站优化</a></div>
+									<div class="post-like"> <a href="javascript:;" data-action="ding" data-id="105"
+											class="specsZan "> <i class="iconfont icon-like"></i> <span class="count">
+												0</span> </a></div>
+									<div class="post-share">
+										<div class="social-share sharehidden"></div> <i
+											class="iconfont show-share icon-forward"></i>
+									</div>
+								</footer>
+							</article>
+							<div class="toc-container">
+								<div class="toc"></div>
+							</div>
+							<section class="post-squares nextprev">
+								<div class="post-nepre half previous"> <a href="https://fairysen.com/103.html"
+										rel="prev">
+										<div class="background lazyload"
+											style="background-image:url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.1/img/svg/loader/orange.progress-bar-stripe-loader.svg);"
+											data-src="https://fairysen.com/wp-json/sakura/v1/image/feature?374"></div>
+										<span class="label">Previous Post</span>
+										<div class="info">
+											<h3>WordPress百度Ping不生效怎么办</h3>
+											<hr>
+										</div>
+									</a></div>
+								<div class="post-nepre half next"> <a href="https://fairysen.com/106.html" rel="next">
+										<div class="background lazyload"
+											style="background-image:url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.1/img/svg/loader/orange.progress-bar-stripe-loader.svg);"
+											data-src="https://fairysen.com/wp-json/sakura/v1/image/feature?202"></div>
+										<span class="label">Next Post</span>
+										<div class="info">
+											<h3>JavaScript代码屏蔽网页各种按键</h3>
+											<hr>
+										</div>
+									</a></div>
+							</section>
+							<section class="author-profile">
+								<div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person"> <a
+										href="https://fairysen.com/author/Kinoko/" class="profile gravatar"><img
+											src="https://sdn.geekzu.org/avatar/222f6efd128063e196b82d6fb9b10452?s=130.png"
+											itemprop="image" alt="Kinoko" height="70" width="70"></a>
+									<div class="meta"> <span class="title">Author</span>
+										<h3 itemprop="name"> <a href="https://fairysen.com/author/Kinoko/"
+												itemprop="url" rel="author">Kinoko</a></h3>
+									</div>
+								</div>
+								<hr>
+								<p><i class="iconfont icon-write"></i><span class="faa-flash animated"><i
+											class="fa fa-quote-left"></i></span> Never give up your dreams. <span
+										class="faa-flash animated"><i class="fa fa-quote-right"></i></span></p>
+							</section>
+						</main>
+					</div>
+				</div>
+				<section id="comments" class="comments">
+					<div class="commentwrap comments-hidden">
+						<div class="notification"><i class="iconfont icon-mark"></i>查看评论 - <span class="noticom">NOTHING
+							</span></div>
+					</div>
+					<div class="comments-main">
+						<h3 id="comments-list-title">Comments | <span class="noticom">NOTHING </span></h3>
+						<div id="loading-comments"><span></span></div>
+						<div class="commentwrap">
+							<div class="notification-hidden"><i class="iconfont icon-mark"></i> 暂无评论</div>
+						</div>
+						<div id="respond" class="comment-respond">
+							<h3 id="reply-title" class="comment-reply-title"> <small><a rel="nofollow"
+										id="cancel-comment-reply-link" href="/105.html#respond"
+										style="display:none;">取消回复</a></small></h3>
+							<form action="https://fairysen.com/wp-comments-post.php" method="post" id="commentform"
+								class="comment-form" novalidate>
+								<p style="font-style:italic"><a href="https://segmentfault.com/markdown"
+										target="_blank"><i class="iconfont icon-markdown" style="color:#000"></i></a>
+									Markdown Supported while <i class="fa fa-code" aria-hidden="true"></i> Forbidden</p>
+								<div class="comment-textarea"><textarea placeholder="你是我一生只会遇见一次的惊喜 ..." name="comment"
+										class="commentbody" id="comment" rows="5" tabindex="4"></textarea><label
+										class="input-label">你是我一生只会遇见一次的惊喜 ...</label></div>
+								<div id="upload-img-show"></div>
+								<p id="emotion-toggle" class="no-select"> <span class="emotion-toggle-off">戳我试试
+										OωO</span> <span class="emotion-toggle-on">嘿嘿嘿 ヾ(≧∇≦*)ゝ</span></p>
+								<div class="emotion-box no-select">
+									<table class="motion-switcher-table">
+										<tr>
+											<th onclick="motionSwitch('.bili')" class="bili-bar on-hover">bilibili~</th>
+											<th onclick="motionSwitch('.menhera')" class="menhera-bar">(=・ω・=)</th>
+											<th onclick="motionSwitch('.tieba')" class="tieba-bar">小汤圆</th>
+										</tr>
+									</table>
+									<div class="bili-container motion-container"><span
+											class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('baiyan',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_baiyan.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/baiyan.png);
+ animation-duration: 1800ms;
+ animation-timing-function: steps(45);
+ transform: translateY(-1408px);
+ height: 1440px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('fadai',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_fadai.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/fadai.png);
+ animation-duration: 1080ms;
+ animation-timing-function: steps(27);
+ transform: translateY(-832px);
+ height: 864px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('koubi',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_koubi.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/koubi.png);
+ animation-duration: 1200ms;
+ animation-timing-function: steps(30);
+ transform: translateY(-928px);
+ height: 960px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('qinqin',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_qinqin.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/qinqin.png);
+ animation-duration: 280ms;
+ animation-timing-function: steps(7);
+ transform: translateY(-192px);
+ height: 224px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('weiqu',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_weiqu.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/weiqu.png);
+ animation-duration: 800ms;
+ animation-timing-function: steps(20);
+ transform: translateY(-608px);
+ height: 640px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('bishi',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_bishi.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/bishi.png);
+ animation-duration: 360ms;
+ animation-timing-function: steps(9);
+ transform: translateY(-256px);
+ height: 288px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('fanu',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_fanu.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/fanu.png);
+ animation-duration: 1320ms;
+ animation-timing-function: steps(33);
+ transform: translateY(-1024px);
+ height: 1056px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('kun',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_kun.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/kun.png);
+ animation-duration: 1760ms;
+ animation-timing-function: steps(44);
+ transform: translateY(-1376px);
+ height: 1408px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('se',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_se.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/se.png);
+ animation-duration: 400ms;
+ animation-timing-function: steps(10);
+ transform: translateY(-288px);
+ height: 320px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('weixiao',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_weixiao.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/weixiao.png);
+ animation-duration: 800ms;
+ animation-timing-function: steps(20);
+ transform: translateY(-608px);
+ height: 640px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('bizui',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_bizui.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/bizui.png);
+ animation-duration: 1240ms;
+ animation-timing-function: steps(31);
+ transform: translateY(-960px);
+ height: 992px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('ganga',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_ganga.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/ganga.png);
+ animation-duration: 1520ms;
+ animation-timing-function: steps(38);
+ transform: translateY(-1184px);
+ height: 1216px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('lengmo',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_lengmo.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/lengmo.png);
+ animation-duration: 40ms;
+ animation-timing-function: steps(1);
+ transform: translateY(-0px);
+ height: 32px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('shengbing',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_shengbing.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/shengbing.png);
+ animation-duration: 1400ms;
+ animation-timing-function: steps(35);
+ transform: translateY(-1088px);
+ height: 1120px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('wunai',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_wunai.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/wunai.png);
+ animation-duration: 920ms;
+ animation-timing-function: steps(23);
+ transform: translateY(-704px);
+ height: 736px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('chan',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_chan.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/chan.png);
+ animation-duration: 1600ms;
+ animation-timing-function: steps(40);
+ transform: translateY(-1248px);
+ height: 1280px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('guilian',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_guilian.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/guilian.png);
+ animation-duration: 40ms;
+ animation-timing-function: steps(1);
+ transform: translateY(-0px);
+ height: 32px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('liubixue',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_liubixue.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/liubixue.png);
+ animation-duration: 1400ms;
+ animation-timing-function: steps(35);
+ transform: translateY(-1088px);
+ height: 1120px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('shengqi',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_shengqi.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/shengqi.png);
+ animation-duration: 440ms;
+ animation-timing-function: steps(11);
+ transform: translateY(-320px);
+ height: 352px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('xiaoku',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_xiaoku.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/xiaoku.png);
+ animation-duration: 600ms;
+ animation-timing-function: steps(15);
+ transform: translateY(-448px);
+ height: 480px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('daku',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_daku.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/daku.png);
+ animation-duration: 320ms;
+ animation-timing-function: steps(8);
+ transform: translateY(-224px);
+ height: 256px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('guzhang',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_guzhang.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/guzhang.png);
+ animation-duration: 680ms;
+ animation-timing-function: steps(17);
+ transform: translateY(-512px);
+ height: 544px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('liuhan',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_liuhan.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/liuhan.png);
+ animation-duration: 1080ms;
+ animation-timing-function: steps(27);
+ transform: translateY(-832px);
+ height: 864px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('shuizhao',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_shuizhao.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/shuizhao.png);
+ animation-duration: 960ms;
+ animation-timing-function: steps(24);
+ transform: translateY(-736px);
+ height: 768px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('xieyanxiao',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_xieyanxiao.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/xieyanxiao.png);
+ animation-duration: 320ms;
+ animation-timing-function: steps(8);
+ transform: translateY(-224px);
+ height: 256px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('dalao',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_dalao.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/dalao.png);
+ animation-duration: 1320ms;
+ animation-timing-function: steps(33);
+ transform: translateY(-1024px);
+ height: 1056px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('haixiu',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_haixiu.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/haixiu.png);
+ animation-duration: 1240ms;
+ animation-timing-function: steps(31);
+ transform: translateY(-960px);
+ height: 992px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('liulei',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_liulei.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/liulei.png);
+ animation-duration: 40ms;
+ animation-timing-function: steps(1);
+ transform: translateY(-0px);
+ height: 32px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('sikao',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_sikao.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/sikao.png);
+ animation-duration: 1440ms;
+ animation-timing-function: steps(36);
+ transform: translateY(-1120px);
+ height: 1152px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('yiwen',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_yiwen.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/yiwen.png);
+ animation-duration: 840ms;
+ animation-timing-function: steps(21);
+ transform: translateY(-640px);
+ height: 672px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('dalian',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_dalian.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/dalian.png);
+ animation-duration: 1480ms;
+ animation-timing-function: steps(37);
+ transform: translateY(-1152px);
+ height: 1184px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('heirenwenhao',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_heirenwenhao.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/heirenwenhao.png);
+ animation-duration: 1040ms;
+ animation-timing-function: steps(26);
+ transform: translateY(-800px);
+ height: 832px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('miantian',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_miantian.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/miantian.png);
+ animation-duration: 1120ms;
+ animation-timing-function: steps(28);
+ transform: translateY(-864px);
+ height: 896px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('tiaokan',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_tiaokan.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/tiaokan.png);
+ animation-duration: 40ms;
+ animation-timing-function: steps(1);
+ transform: translateY(-0px);
+ height: 32px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('yun',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_yun.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/yun.png);
+ animation-duration: 480ms;
+ animation-timing-function: steps(12);
+ transform: translateY(-352px);
+ height: 384px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('dianzan',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_dianzan.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/dianzan.png);
+ animation-duration: 800ms;
+ animation-timing-function: steps(20);
+ transform: translateY(-608px);
+ height: 640px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('huaixiao',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_huaixiao.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/huaixiao.png);
+ animation-duration: 1240ms;
+ animation-timing-function: steps(31);
+ transform: translateY(-960px);
+ height: 992px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('mudengkoudai',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_mudengkoudai.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/mudengkoudai.png);
+ animation-duration: 40ms;
+ animation-timing-function: steps(1);
+ transform: translateY(-0px);
+ height: 32px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('tiaopi',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_tiaopi.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/tiaopi.png);
+ animation-duration: 2000ms;
+ animation-timing-function: steps(50);
+ transform: translateY(-1568px);
+ height: 1600px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('zaijian',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_zaijian.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/zaijian.png);
+ animation-duration: 960ms;
+ animation-timing-function: steps(24);
+ transform: translateY(-736px);
+ height: 768px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('doge',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_doge.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/doge.png);
+ animation-duration: 800ms;
+ animation-timing-function: steps(20);
+ transform: translateY(-608px);
+ height: 640px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('jingxia',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_jingxia.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/jingxia.png);
+ animation-duration: 1280ms;
+ animation-timing-function: steps(32);
+ transform: translateY(-992px);
+ height: 1024px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('nanguo',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_nanguo.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/nanguo.png);
+ animation-duration: 1120ms;
+ animation-timing-function: steps(28);
+ transform: translateY(-864px);
+ height: 896px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('touxiao',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_touxiao.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/touxiao.png);
+ animation-duration: 240ms;
+ animation-timing-function: steps(6);
+ transform: translateY(-160px);
+ height: 192px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('zhoumei',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_zhoumei.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/zhoumei.png);
+ animation-duration: 40ms;
+ animation-timing-function: steps(1);
+ transform: translateY(-0px);
+ height: 32px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('facai',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_facai.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/facai.png);
+ animation-duration: 1200ms;
+ animation-timing-function: steps(30);
+ transform: translateY(-928px);
+ height: 960px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('keai',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_keai.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/keai.png);
+ animation-duration: 680ms;
+ animation-timing-function: steps(17);
+ transform: translateY(-512px);
+ height: 544px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('outu',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_outu.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/outu.png);
+ animation-duration: 1680ms;
+ animation-timing-function: steps(42);
+ transform: translateY(-1312px);
+ height: 1344px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('tuxue',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_tuxue.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/tuxue.png);
+ animation-duration: 320ms;
+ animation-timing-function: steps(8);
+ transform: translateY(-224px);
+ height: 256px;
+ "></div>
+										</span><span class="emotion-secter emotion-item emotion-select-parent"
+											onclick="grin('zhuakuang',type = 'Math')"
+											style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/hd/ic_emoji_zhuakuang.png);">
+											<div class="img emotion-select-child" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@2.9.4/img/bili/zhuakuang.png);
+ animation-duration: 760ms;
+ animation-timing-function: steps(19);
+ transform: translateY(-576px);
+ height: 608px;
+ "></div>
+										</span></div>
+									<div class="menhera-container motion-container" style="display:none;"> <a
+											class="emoji-item">(⌒▽⌒)</a> <a class="emoji-item">（￣▽￣）</a> <a
+											class="emoji-item">(=・ω・=)</a> <a class="emoji-item">(｀・ω・´)</a> <a
+											class="emoji-item">(〜￣△￣)〜</a> <a class="emoji-item">(･∀･)</a> <a
+											class="emoji-item">(°∀°)ﾉ</a> <a class="emoji-item">(￣3￣)</a> <a
+											class="emoji-item">╮(￣▽￣)╭</a> <a class="emoji-item">(´_ゝ｀)</a> <a
+											class="emoji-item">←_←</a> <a class="emoji-item">→_→</a> <a
+											class="emoji-item">(&lt;_&lt;)</a> <a class="emoji-item">(&gt;_&gt;)</a> <a
+											class="emoji-item">(;¬_¬)</a> <a class="emoji-item">("▔□▔)/</a> <a
+											class="emoji-item">(ﾟДﾟ≡ﾟдﾟ)!?</a> <a class="emoji-item">Σ(ﾟдﾟ;)</a> <a
+											class="emoji-item">Σ(￣□￣||)</a> <a class="emoji-item">(’；ω；‘)</a> <a
+											class="emoji-item">（/TДT)/</a> <a class="emoji-item">(^・ω・^ )</a> <a
+											class="emoji-item">(｡･ω･｡)</a> <a class="emoji-item">(●￣(ｴ)￣●)</a> <a
+											class="emoji-item">ε=ε=(ノ≧∇≦)ノ</a> <a class="emoji-item">(’･_･‘)</a> <a
+											class="emoji-item">(-_-#)</a> <a class="emoji-item">（￣へ￣）</a> <a
+											class="emoji-item">(￣ε(#￣)Σ</a> <a class="emoji-item">ヽ(‘Д’)ﾉ</a> <a
+											class="emoji-item">（#-_-)┯━┯</a> <a class="emoji-item">(╯°口°)╯(┴—┴</a> <a
+											class="emoji-item">←◡←</a> <a class="emoji-item">( ♥д♥)</a> <a
+											class="emoji-item">_(:3」∠)_</a> <a class="emoji-item">Σ&gt;―(〃°ω°〃)♡→</a> <a
+											class="emoji-item">⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄</a> <a
+											class="emoji-item">(╬ﾟдﾟ)▄︻┻┳═一</a> <a class="emoji-item">･*･:≡(　ε:)</a> <a
+											class="emoji-item">(笑)</a> <a class="emoji-item">(汗)</a> <a
+											class="emoji-item">(泣)</a> <a class="emoji-item">(苦笑)</a></div>
+									<div class="tieba-container motion-container" style="display:none;"><span
+											title="zhaxin" onclick="grin('zhaxin')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/zhaxin.png" /></span><span
+											title="youhei" onclick="grin('youhei')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/youhei.png" /></span><span
+											title="xixi" onclick="grin('xixi')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/xixi.png" /></span><span
+											title="xiuxiuxiu" onclick="grin('xiuxiuxiu')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/xiuxiuxiu.gif" /></span><span
+											title="xianmu" onclick="grin('xianmu')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/xianmu.png" /></span><span
+											title="wuliulei" onclick="grin('wuliulei')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/wuliulei.png" /></span><span
+											title="woc" onclick="grin('woc')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/woc.png" /></span><span
+											title="what" onclick="grin('what')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/what.png" /></span><span
+											title="waibiwaibi" onclick="grin('waibiwaibi')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/waibiwaibi.gif" /></span><span
+											title="touxiao" onclick="grin('touxiao')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/touxiao.png" /></span><span
+											title="taotou" onclick="grin('taotou')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/taotou.png" /></span><span
+											title="tanqi" onclick="grin('tanqi')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/tanqi.png" /></span><span
+											title="siliu" onclick="grin('siliu')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/siliu.png" /></span><span
+											title="pu" onclick="grin('pu')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/pu.png" /></span><span
+											title="outman" onclick="grin('outman')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/outman.png" /></span><span
+											title="nice" onclick="grin('nice')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/nice.png" /></span><span
+											title="mua" onclick="grin('mua')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/mua.gif" /></span><span
+											title="momoda" onclick="grin('momoda')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/momoda.gif" /></span><span
+											title="liulei" onclick="grin('liulei')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/liulei.png" /></span><span
+											title="liuhan" onclick="grin('liuhan')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/liuhan.png" /></span><span
+											title="kengkeng" onclick="grin('kengkeng')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/kengkeng.gif" /></span><span
+											title="keai" onclick="grin('keai')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/keai.png" /></span><span
+											title="kanbujian" onclick="grin('kanbujian')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/kanbujian.png" /></span><span
+											title="hengji" onclick="grin('hengji')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/hengji.png" /></span><span
+											title="heng-p" onclick="grin('heng-p')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/heng-p.png" /></span><span
+											title="heihei" onclick="grin('heihei')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/heihei.png" /></span><span
+											title="haixiu" onclick="grin('haixiu')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/haixiu.gif" /></span><span
+											title="haipa" onclick="grin('haipa')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/haipa.gif" /></span><span
+											title="guzhang" onclick="grin('guzhang')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/guzhang.gif" /></span><span
+											title="guandeng" onclick="grin('guandeng')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/guandeng.gif" /></span><span
+											title="ganbei" onclick="grin('ganbei')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/ganbei.png" /></span><span
+											title="gan" onclick="grin('gan')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/gan.png" /></span><span
+											title="enheng" onclick="grin('enheng')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/enheng.png" /></span><span
+											title="emmm" onclick="grin('emmm')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/emmm.gif" /></span><span
+											title="diaoyan" onclick="grin('diaoyan')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/diaoyan.png" /></span><span
+											title="dani" onclick="grin('dani')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/dani.png" /></span><span
+											title="daimeng" onclick="grin('daimeng')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/daimeng.png" /></span><span
+											title="chouchou" onclick="grin('chouchou')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/chouchou.png" /></span><span
+											title="chigua" onclick="grin('chigua')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/chigua.png" /></span><span
+											title="chicao" onclick="grin('chicao')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/chicao.png" /></span><span
+											title="ccc" onclick="grin('ccc')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/ccc.png" /></span><span
+											title="calei" onclick="grin('calei')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/calei.png" /></span><span
+											title="buting" onclick="grin('buting')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/buting.gif" /></span><span
+											title="bubu" onclick="grin('bubu')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/bubu.gif" /></span><span
+											title="bling" onclick="grin('bling')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/kengkeng.gif" /></span><span
+											title="bixinxin" onclick="grin('bixinxin')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/bixinxin.png" /></span><span
+											title="alei" onclick="grin('alei')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/alei.png" /></span><span
+											title="aha" onclick="grin('aha')"><img
+												src="https://oss.amogu.cn/blog/sakura/images/smiles/aha.png" /></span>
+									</div>
+								</div>
+								<div class="cmt-info-container">
+									<div class="comment-user-avatar"><img
+											src="https://fairysen.com/wp-content/themes/Sakura/images/avatar.jpeg">
+										<div class="socila-check qq-check"><i class="fa fa-qq" aria-hidden="true"></i>
+										</div>
+										<div class="socila-check gravatar-check"><i class="fa fa-google"
+												aria-hidden="true"></i></div>
+									</div>
+									<div class="popup cmt-popup cmt-author" onclick="cmt_showPopup(this)"><span
+											class="popuptext" id="thePopup"
+											style="margin-left: -115px;width: 230px;">输入QQ号将自动拉取昵称和头像</span><input
+											type="text" placeholder="昵称或QQ号 (昵称 )" name="author" id="author" value=""
+											size="22" autocomplete="off" tabindex="1" aria-required='true' /></div>
+									<div class="popup cmt-popup" onclick="cmt_showPopup(this)"><span class="popuptext"
+											id="thePopup" style="margin-left: -65px;width: 130px;">你将收到回复通知</span><input
+											type="text" placeholder="邮箱 (必须* )" name="email" id="email" value=""
+											size="22" tabindex="1" autocomplete="off" aria-required='true' /></div>
+									<div class="popup cmt-popup" onclick="cmt_showPopup(this)"><span class="popuptext"
+											id="thePopup" style="margin-left: -55px;width: 110px;">禁止小广告😀</span><input
+											type="text" placeholder="网站" name="url" id="url" value="" size="22"
+											autocomplete="off" tabindex="1" /></div>
+								</div><label class="siren-checkbox-label"><input class="siren-checkbox-radio"
+										type="checkbox" name="no-robot"><span
+										class="siren-no-robot-checkbox siren-checkbox-radioInput"></span>滴，学生卡</label><label
+									class="siren-checkbox-label"><input class="siren-checkbox-radio" type="checkbox"
+										name="is-private"><span
+										class="siren-is-private-checkbox siren-checkbox-radioInput"></span>悄悄话</label><label
+									class="siren-checkbox-label"><input class="siren-checkbox-radio" type="checkbox"
+										name="mail-notify"><span
+										class="siren-mail-notify-checkbox siren-checkbox-radioInput"></span>邮件通知</label>
+								<input type="text" placeholder="QQ" name="new_field_qq" id="qq" value=""
+									style="display:none" autocomplete="off" />
+								<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit"
+										value="BiuBiuBiu~" /> <input type='hidden' name='comment_post_ID' value='105'
+										id='comment_post_ID' /> <input type='hidden' name='comment_parent'
+										id='comment_parent' value='0' /></p>
+								<p style="display: none;"><input type="hidden" id="akismet_comment_nonce"
+										name="akismet_comment_nonce" value="88f154bee9" /></p>
+								<p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea"
+											cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden"
+										id="ak_js" name="ak_js" value="135" />
+									<script>
+										document.getElementById("ak_js").setAttribute("value", (new Date()).getTime());
+									</script>
+								</p>
+							</form>
+						</div>
+					</div>
+				</section>
+			</div>
+			<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="site-info" theme-info="Sakura v3.4.0">
+					<div class="footertext">
+						<div class="img-preload"> <img
+								src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/wordpress-rotating-ball-o.svg">
+							<img
+								src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/disqus-preloader.svg">
+						</div>
+						<p style="color: #666666;">
+						<p style="font-family: 'Ubuntu';color: #666666">© 2021 晨曦初致<br><a
+								href="https://beian.miit.gov.cn/" target="_blank"></a></p>
+						<p><span id="sitetime">小破站已运行 0 年 0 天 0 小时 0 分钟 0 秒</span></p>
+						</p>
+					</div>
+					<div class="footer-device">
+						<p style="font-family: 'Ubuntu', sans-serif;"> <span style="color: #b9b9b9;"> Theme <a href="#"
+									style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a>
+								<i class="iconfont icon-sakura rotating"
+									style="color: #ffc0cb;display:inline-block"></i> by Mashiro </span></p>
+					</div>
+				</div>
+			</footer>
+			<div class="openNav no-select">
+				<div class="iconflat no-select">
+					<div class="icon"></div>
+				</div>
+				<div class="site-branding">
+					<h1 class="site-title"><a href="index.html">晨曦初致</a></h1>
+				</div>
+			</div>
+		</section>
+		<div id="mo-nav">
+			<div class="m-avatar"> <img src="https://cdn.jsdelivr.net/gh/malfunction7/CDN@main/img/dogge.gif">
+			</div>
+			<p
+				style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">
+				Contact me</p>
+			<p style="text-align: center;word-spacing: 20px;"> <a href="tencent://message/?uin=396328923"
+					class="fa fa-qq" target="_blank" style="color: #088de7"></a> <a
+					href="https://github.com/Fog-Forest/" class="fa fa-github-alt" target="_blank"
+					style="color: #333"></a> <a onclick="mail_me()" class="fa fa-envelope" style="color: #ffbf00"></a>
+			</p>
+			<div class="m-search">
+				<form class="m-search-form" method="get" action="https://fairysen.com" role="search"> <input
+						class="m-search-input" type="search" name="s" placeholder="搜索..." required></form>
+			</div>
+			<ul id="menu-menu-1" class="menu">
+				<li><a href="/">🌈 首页</a></li>
+				<li><a href="https://fairysen.com/archive/">📂 归档</a>
+					<ul class="sub-menu">
+							💻</a></li>
+						<li><a href="https://www.amogu.cn/">笔记 📔</a></li>
+					</ul>
+				</li>
+				<li><a href="#">🎯 清单</a>
+					<ul class="sub-menu">
+						<li><a href="https://fairysen.com/music/">歌单 🎵</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="https://fairysen.com/leave/">📝 留言板</a></li>
+				
+				<li><a href="#">📌 关于</a>
+					<ul class="sub-menu">
+						<li><a href="https://fairysen.com/about/">我? 👑</a></li>
+					</ul>
+				</li>
+				<li><a href="#">👀 看看</a>
+					<ul class="sub-menu">
+						<li><a href="https://api.amogu.cn/">API ⚙️</a></li>
+						<li><a href="https://view.amogu.cn/">画廊 🖼️</a></li>
+						<li><a href="https://dash.fairysen.com/">导航 🌞</a></li>
+					</ul>
+				</li>
+				<li><a href="https://travellings.link">🚇 开往</a></li>
+			</ul>
+		</div> <a class="cd-top faa-float animated "></a> <button id="moblieGoTop" title="Go to top"><i
+				class="fa fa-chevron-up" aria-hidden="true"></i></button> <button id="moblieDarkLight"><i
+				class="fa fa-moon-o" aria-hidden="true"></i></button>
+		<form class="js-search search-form search-form--modal" method="get" action="https://fairysen.com" role="search">
+			<div class="search-form__inner">
+				<div class="micro">
+					<p class="micro mb-">想要找点什么呢？</p> <i class="iconfont icon-search"></i> <input class="text-input"
+						type="search" name="s" placeholder="搜索" required>
+				</div>
+			</div>
+			<div class="search_close"></div>
+		</form>
+		<script type='text/javascript'
+			src='https://cdn.jsdelivr.net/gh/moeplayer/hermit-x@2.9.9/assets/js/APlayer.min.js' id='APlayer.min-js'>
+		</script>
+		<script type='text/javascript' id='hermit-load.min-js-extra'>
+			var HermitX = {
+				"ajaxurl": "https:\/\/fairysen.com\/wp-admin\/admin-ajax.php",
+				"version": "2.9.9"
+			};
+		</script>
+		<script type='text/javascript'
+			src='https://cdn.jsdelivr.net/gh/moeplayer/hermit-x@2.9.9/assets/js/hermit-load.min.js'
+			id='hermit-load.min-js'></script>
+		<script type='text/javascript' id='app-js-extra'>
+			var Poi = {
+				"pjax": "1",
+				"movies": {
+					"url": "https:\/\/cloud.amogu.cn\/1\/main\/\u89c6\u9891\/wallpaper",
+					"name": "1,2",
+					"live": "open"
+				},
+				"windowheight": "auto",
+				"codelamp": "close",
+				"ajaxurl": "https:\/\/fairysen.com\/wp-admin\/admin-ajax.php",
+				"order": "desc",
+				"formpostion": "bottom",
+				"reply_link_version": "new",
+				"api": "https:\/\/fairysen.com\/wp-json\/",
+				"nonce": "c0e16868e8",
+				"google_analytics_id": "",
+				"gravatar_url": "dn-qiniu-avatar.qbox.me\/avatar"
+			};
+		</script>
+		
+		
+		<script type='text/javascript' src='https://cdn.jsdelivr.net/github-cards/latest/widget.js' id='github_card-js'>
+		</script>
+		
+		
+		<div class="site-statistics">
+			<script type="text/javascript">
+				var _hmt = _hmt || [];
+				(function() {
+					var hm = document.createElement("script");
+					hm.src = "https://hm.baidu.com/hm.js?89a9fdb536616d7fb3e421a6240b08d0";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(hm, s);
+				})();
+			</script>
+		</div>
+		
+		
+		<div class="changeSkin-gear no-select" style="bottom: -999px;">
+			<div class="keys"> <span id="open-skinMenu"> <i class="iconfont icon-gear inline-block rotating"></i>&nbsp;
+					切换主题 | SCHEME TOOL </span></div>
+		</div>
+		<div class="skin-menu no-select">
+			<div class="theme-controls row-container">
+				<ul class="menu-list">
+					<li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+					<li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+					<li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+					<li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+					<li id="totem-bg"> <i class="fa fa-superpowers" aria-hidden="true"></i></li>
+					<li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+					<li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+					<li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+				</ul>
+			</div>
+			<div class="font-family-controls row-container"> <button type="button" class="control-btn-serif selected"
+					data-mode="serif" onclick="mashiro_global.font_control.change_font()">Serif</button> <button
+					type="button" class="control-btn-sans-serif" data-mode="sans-serif"
+					onclick="mashiro_global.font_control.change_font()">Sans Serif</button></div>
+		</div><canvas id="night-mode-cover"></canvas>
+		<div id="aplayer-float" style="z-index: 100;" class="aplayer" data-id="8044250286" data-server="tencent"
+			data-type="playlist" data-fixed="true" data-theme="orange"></div>
+			
+			
+		<script src="https://oss.amogu.cn/blog/live2d/autoload.js"></script>
+		
+		
+		
+		<script type="text/javascript">
+			function siteTime() {
+				window.setTimeout("siteTime()", 1000);
+				var seconds = 1000;
+				var minutes = seconds * 60;
+				var hours = minutes * 60;
+				var days = hours * 24;
+				var years = days * 365;
+				var today = new Date();
+				var todayYear = today.getFullYear();
+				var todayMonth = today.getMonth() + 1;
+				var todayDate = today.getDate();
+				var todayHour = today.getHours();
+				var todayMinute = today.getMinutes();
+				var todaySecond = today.getSeconds();
+				/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+				year - 作为date对象的年份，为4位年份值
+				month - 0-11之间的整数，做为date对象的月份
+				day - 1-31之间的整数，做为date对象的天数
+				hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+				minutes - 0-59之间的整数，做为date对象的分钟数
+				seconds - 0-59之间的整数，做为date对象的秒数
+				microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+				var t1 = Date.UTC(2021, 11, 18, 00, 00, 00); //北京时间2018-2-13 00:00:00
+				var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+				var diff = t2 - t1;
+				var diffYears = Math.floor(diff / years);
+				var diffDays = Math.floor((diff / days) - diffYears * 365);
+				var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+				var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+				var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes *
+					minutes) / seconds);
+				document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours +
+					" 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+			} 
+			siteTime();
+		</script>
+		<script defer
+			src="https://fairysen.com/wp-content/cache/autoptimize/js/autoptimize_885ca87ae613b46ebcab92fe06897aaf.js">
+		</script>
+	</body>
+</html>
